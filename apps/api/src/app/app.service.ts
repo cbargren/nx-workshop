@@ -5,7 +5,7 @@ import { Injectable } from '@nestjs/common';
 const games: Game[] = [
   {
     id: 'settlers-in-the-can',
-    name: 'Settlers in a Can',
+    name: 'Settlers in the Can',
     image: '/assets/beans.png', // 'https://media.giphy.com/media/xUNda3pLJEsg4Nedji/giphy.gif',
     description:
       'Help your bug family claim the best real estate in a spilled can of beans.',
@@ -22,7 +22,7 @@ const games: Game[] = [
   },
   {
     id: 'purrfection',
-    name: 'Purrfection',
+    name: 'Purrrrfection',
     image: '/assets/cat.png', // 'https://media.giphy.com/media/12xMvwvQXJNx0k/giphy.gif',
     description: 'A cat grooming contest goes horribly wrong.',
     price: 45,
