@@ -10,7 +10,8 @@
           "lint",
           "test",
           "e2e",
-          "build-storybook"
+          "build-storybook",
+          "deploy"
         ],
         "accessToken": "MjgwOGNkZDYtMGQyMy00MzE5LTg2ZGQtYjI1OWM5ODEwMGVifHJlYWQtd3JpdGU="
       }
@@ -24,6 +25,11 @@
       "inputs": [
         "production",
         "^production"
+      ]
+    },
+    "deploy": {
+      "dependsOn": [
+        "build"
       ]
     },
     "test": {
