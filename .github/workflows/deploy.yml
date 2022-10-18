@@ -19,5 +19,8 @@ jobs:
         with:
           fetch-depth: 0
       - uses: bahmutov/npm-install@v1
-      - run: yarn nx affected --target=build --configuration=production --base=HEAD~1 --parallel
-      - run: yarn nx affected --target=deploy --configuration=production --base=HEAD~1 --parallel
+      - uses: nrwl/nx-set-shas@v2
+        with:
+          main-branch-name: 'main'
+      - run: yarn nx affected --target=build --configuration=production --parallel
+      - run: yarn nx affected --target=deploy --configuration=production --parallel
