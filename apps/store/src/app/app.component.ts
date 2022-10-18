@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
-import { getAllGames } from '../fake-api';
-import { formatRating } from '@bg-hoard/store/util-formatters';
 import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { formatRating } from '@bg-hoard/store/util-formatters';
 import { Game } from '@bg-hoard/util-interface';
+
+console.log('hello world');
 
 @Component({
   selector: 'bg-hoard-root',
