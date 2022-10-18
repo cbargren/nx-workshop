@@ -19,7 +19,5 @@ jobs:
         with:
           fetch-depth: 0
       - uses: bahmutov/npm-install@v1
-      - run: yarn nx build store --configuration=production
-      - run: yarn nx build api --configuration=production
-      - run: yarn nx deploy store
-      - run: yarn nx deploy api
+      - run: yarn nx affected --target=build --configuration=production --base=HEAD~1 --parallel
+      - run: yarn nx affected --target=deploy --configuration=production --base=HEAD~1 --parallel
