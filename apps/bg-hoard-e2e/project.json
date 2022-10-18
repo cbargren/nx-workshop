@@ -1,0 +1,30 @@
+{
+  "name": "bg-hoard-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/bg-hoard-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/bg-hoard-e2e/cypress.config.ts",
+        "devServerTarget": "bg-hoard:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "bg-hoard:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/bg-hoard-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": ["scope:store", "type:e2e"],
+  "implicitDependencies": ["bg-hoard"]
+}
