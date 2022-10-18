@@ -1,5 +1,10 @@
 name: Deploy Website # The name will show up on the GitHub Actions dashboard
 
+env:
+  SURGE_DOMAIN_STORE: ${{ secrets.SURGE_DOMAIN_STORE }}
+  SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+  HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+
 on:
   push:
     branches:
