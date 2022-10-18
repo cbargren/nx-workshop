@@ -18,7 +18,7 @@
       "type": "string",
       "description": "Add tags to the project (used for linting)",
       "alias": "t"
-    }, 
+    },
     "directory": {
       "type": "string",
       "description": "A directory where the project is placed",
@@ -26,16 +26,24 @@
       "x-prompt": {
         "message": "Which directory do you want the lib to be in?",
         "type": "list",
-        "items": [{
-          "value": "store",
-          "label": "store"
-        }, {
-          "value": "api",
-          "label": "api"
-        }, {
-          "value": "shared",
-          "label": "shared"
-        }]
+        "items": [
+          {
+            "value": "api",
+            "label": "api"
+          },
+          {
+            "value": "store",
+            "label": "store"
+          },
+          {
+            "value": "videos",
+            "label": "videos"
+          },
+          {
+            "value": "shared",
+            "label": "shared"
+          }
+        ]
       }
     }
   },
