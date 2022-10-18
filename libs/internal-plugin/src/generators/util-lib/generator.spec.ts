@@ -17,12 +17,12 @@ describe('util-lib generator', () => {
 
   it('should run successfully', async () => {
     await generator(appTree, options);
-    const config = readProjectConfiguration(appTree, 'test');
-    console.log(config);
+    const config = readProjectConfiguration(appTree, 'api-util-test');
     expect(config).toBeDefined();
-    expect(config).toEqual({
-      name: 'util-test',
-      directory: 'api',
+    expect(config).toMatchObject({
+      name: 'api-util-test',
+      root: 'libs/api/util-test',
+      tags: ['scope:api', 'type:util'],
     });
   });
 });
