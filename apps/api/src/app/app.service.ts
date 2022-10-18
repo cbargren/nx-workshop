@@ -1,5 +1,6 @@
-import { Injectable } from '@nestjs/common';
+import { sendNotification } from '@bg-hoard/api/util-notifications';
 import { Game } from '@bg-hoard/util-interface';
+import { Injectable } from '@nestjs/common';
 
 const games: Game[] = [
   {
@@ -28,6 +29,8 @@ const games: Game[] = [
     rating: Math.random(),
   },
 ];
+
+sendNotification('asdf');
 
 @Injectable()
 export class AppService {
